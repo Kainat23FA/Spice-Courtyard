@@ -1,0 +1,1 @@
+console.log("Spice Courtyard JavaScript is connected!");
