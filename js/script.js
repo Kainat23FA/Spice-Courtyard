@@ -1,11 +1,6 @@
 console.log("Spice Courtyard JavaScript is connected!");
 
 const form = document.getElementById("contact-form");
-
-const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
-const phoneInput = document.getElementById("phone");
-const messageInput = document.getElementById("message");
 const formMessage = document.getElementById("form-message");
 const checkoutButton = document.getElementById("checkout-btn");
 const checkoutSection = document.getElementById("checkout-section");
@@ -92,6 +87,8 @@ const cartCount = document.getElementById("cart-count");
 const clearCartButton = document.getElementById("clear-cart");
 
 let cart = [];
+
+
 
 
 // ==============================
@@ -270,6 +267,46 @@ function updateCart() {
 
 }
 
+
+// ==============================
+// Cart Quantity Controls
+// ==============================
+
+cartItems.addEventListener("click", function (event) {
+
+    const index = event.target.getAttribute("data-index");
+
+    if (index === null) {
+        return;
+    }
+
+    if (event.target.classList.contains("increase-btn")) {
+
+        cart[index].quantity++;
+
+    }
+
+    if (event.target.classList.contains("decrease-btn")) {
+
+        cart[index].quantity--;
+
+        if (cart[index].quantity === 0) {
+            cart.splice(index, 1);
+        }
+
+    }
+
+    if (event.target.classList.contains("remove-btn")) {
+
+        cart.splice(index, 1);
+
+    }
+
+    updateCart();
+
+});
+
+
 // ==============================
 // Clear Cart
 // ==============================
@@ -281,7 +318,6 @@ clearCartButton.addEventListener("click", function () {
     updateCart();
 
 });
-
 
 // ==============================
 // Proceed to Checkout
