@@ -19,11 +19,11 @@
 
 <body>
 
-    <header>
+    <header class="sticky-top">
 
 
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
 
                 <!-- Restaurant Logo / Name -->
@@ -37,48 +37,65 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+
                 <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="mainNavbar">
 
                     <ul class="navbar-nav ms-auto align-items-lg-center">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home">Home</a>
+                            <a class="nav-link active" href="#home">
+                                Home
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#about">
+                                About
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#menu">Menu</a>
+                            <a class="nav-link" href="#services">
+                                Services
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
+                            <a class="nav-link" href="#menu">
+                                Menu
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#reviews">Reviews</a>
+                            <a class="nav-link" href="#cart">
+                                Order <span id="cart-count">(0)</span>
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#faq">FAQ</a>
+                            <a class="nav-link" href="#reviews">
+                                Reviews
+                            </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link" href="#faq">
+                                FAQ
+                            </a>
                         </li>
 
-                        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-                            <a class="btn btn-primary" href="#contact">
-                                Reserve a Table
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                Contact
                             </a>
                         </li>
 
                     </ul>
 
                 </div>
+
+
 
             </div>
         </nav>
@@ -113,8 +130,8 @@
 
                         <div class="hero-buttons">
 
-                            <a href="#contact" class="btn btn-primary">
-                                Reserve a Table
+                            <a href="#cart" class="btn btn-primary">
+                                Order Now
                             </a>
 
                             <a href="#menu" class="btn btn-outline-light">
@@ -355,7 +372,8 @@
                                         Rs. 650
                                     </strong>
 
-                                    <a href="#contact" class="btn btn-primary">
+                                    <a href="#contact" class="btn btn-primary" data-dish="Chicken Biryani"
+                                        data-price="650">
                                         Order Now
                                     </a>
 
@@ -391,7 +409,8 @@
                                         Rs. 750
                                     </strong>
 
-                                    <a href="#contact" class="btn btn-primary">
+                                    <a href="#contact" class="btn btn-primary" data-dish="Chicken Tikka"
+                                        data-price="750">
                                         Order Now
                                     </a>
 
@@ -427,7 +446,8 @@
                                         Rs. 850
                                     </strong>
 
-                                    <a href="#contact" class="btn btn-primary">
+                                    <a href="#contact" class="btn btn-primary" data-dish="Chicken Karahi"
+                                        data-price="850">
                                         Order Now
                                     </a>
 
@@ -463,7 +483,7 @@
                                         Rs. 350
                                     </strong>
 
-                                    <a href="#contact" class="btn btn-primary">
+                                    <a href="#contact" class="btn btn-primary" data-dish="Gulab Jamun" data-price="350">
                                         Order Now
                                     </a>
 
@@ -534,7 +554,8 @@
 
                             </ul>
 
-                            <a href="#contact" class="btn btn-outline-primary w-100">
+                            <a href="#contact" class="btn btn-outline-primary w-100" data-package="Classic Dinner"
+                                data-price="1499">
                                 Choose Package
                             </a>
 
@@ -575,7 +596,8 @@
 
                             </ul>
 
-                            <a href="#contact" class="btn btn-primary w-100">
+                            <a href="#contact" class="btn btn-primary w-100" data-package="Royal Feast"
+                                data-price="2499">
                                 Choose Package
                             </a>
 
@@ -612,7 +634,8 @@
 
                             </ul>
 
-                            <a href="#contact" class="btn btn-outline-primary w-100">
+                            <a href="#contact" class="btn btn-outline-primary w-100" data-package="Family Celebration"
+                                data-price="4499">
                                 Choose Package
                             </a>
 
@@ -625,6 +648,116 @@
             </div>
 
         </section>
+
+
+
+        <!-- Order Cart Section -->
+        <section id="cart" class="cart-section py-5">
+
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="text-center mb-5">
+                    <h2>Your Order</h2>
+                    <p>
+                        Review your selected items before checkout.
+                    </p>
+                </div>
+
+                <!-- Cart Items -->
+                <div id="cart-items" class="mb-4">
+
+                    <div class="text-center">
+                        <p>Your cart is currently empty.</p>
+                    </div>
+
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary text-center">
+
+                    <h4>
+                        Total:
+                        <span id="cart-total">Rs. 0</span>
+                    </h4>
+
+                    <button id="clear-cart" class="btn btn-outline-danger me-2">
+                        Clear Order
+                    </button>
+
+                    <button id="checkout-btn" class="btn btn-primary">
+                        Proceed to Checkout
+                    </button>
+
+                </div>
+
+
+                <!-- Checkout Form -->
+
+                <div id="checkout-section" class="mt-5 d-none">
+
+                    <div class="text-center mb-4">
+                        <h3>Checkout</h3>
+                        <p>Please enter your details to place your order.</p>
+                    </div>
+
+                    <form id="checkout-form">
+
+                        <div class="mb-3">
+                            <label for="checkout-name" class="form-label">
+                                Full Name
+                            </label>
+
+                            <input type="text" id="checkout-name" class="form-control" placeholder="Enter your name"
+                                required>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="checkout-phone" class="form-label">
+                                Phone Number
+                            </label>
+
+                            <input type="tel" id="checkout-phone" class="form-control" placeholder="03XX-XXXXXXX"
+                                inputmode="numeric" maxlength="11" required>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="checkout-address" class="form-label">
+                                Delivery Address
+                            </label>
+
+                            <textarea id="checkout-address" class="form-control" rows="3"
+                                placeholder="Enter your delivery address" required></textarea>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary">
+                            Place Order
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Order Confirmation -->
+
+                <div id="order-confirmation" class="mt-5 text-center d-none">
+
+                    <h3>Order Confirmed! </h3>
+
+                    <p>
+                        Thank you for ordering from Spice Courtyard.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
 
         <!-- Testimonials Section -->
         <section id="reviews" class="testimonials-section py-5">

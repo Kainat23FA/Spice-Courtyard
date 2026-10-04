@@ -23,14 +23,13 @@ section {
 ================================= */
 
 :root {
-    --primary-color: #8b1e1e;
-    --secondary-color: #d4a017;
-    --dark-color: #2b1a14;
-    --light-color: #fff8f0;
-    --text-color: #333;
+    --primary-color: #722f37;
+    --secondary-color: #c9a66b;
+    --dark-color: #2b1719;
+    --light-color: #faf5ed;
+    --text-color: #333333;
     --white-color: #ffffff;
 }
-
 
 /* ==============================
    Navbar
@@ -39,6 +38,7 @@ section {
 .navbar {
     padding: 15px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    
 }
 
 .navbar-brand {
@@ -57,6 +57,8 @@ section {
 .nav-link.active {
     color: var(--primary-color) !important;
 }
+
+
 
 
 /* ==============================
@@ -659,4 +661,60 @@ section {
         min-height: 350px;
     }
 
+}
+
+
+/* ==============================
+   Cart Section
+   ============================== */
+
+.cart-section {
+    background-color: var(--light-color);
+}
+
+.cart-section .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cart-section .card-body {
+    padding: 20px;
+}
+
+.cart-section h5 {
+    font-weight: 600;
+}
+
+.cart-summary {
+    padding: 25px;
+    border-radius: 12px;
+    background-color: var(--white-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cart-summary h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#cart-count {
+    font-weight: 600;
+}
+
+#checkout-section {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+#order-confirmation {
+    padding: 30px;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
