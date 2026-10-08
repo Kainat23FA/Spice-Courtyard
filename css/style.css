@@ -290,6 +290,7 @@ section {
 .menu-card-content p {
     color: #666;
     font-size: 0.95rem;
+    min-height: 75px;
 }
 
 .menu-card-content strong {
