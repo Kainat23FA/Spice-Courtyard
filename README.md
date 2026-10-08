@@ -72,8 +72,13 @@ Spice-Courtyard/
 │   ├── tikka.jpg
 │   ├── karahi.jpg
 │   └── gulabjamun.jpg
+├── Screenshots/
+│   ├── spice-courtyard-mobile-360.png
+│   ├── spice-courtyard-tablet-768.png
+│   └── spice-courtyard-desktop-1440.png
 └── README.md
 ```
+
 
 ## How to Run Locally
 
