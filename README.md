@@ -126,10 +126,3 @@ Computer Science student interested in web development, software engineering, an
 
 * GitHub: https://github.com/Kainat23FA
 * LinkedIn: https://www.linkedin.com/in/kainatfaisal/
-
-```
-
-**One important point:** I used the same screenshot naming pattern as your old README, but **don't add the screenshot section yet unless those files actually exist**. We'll create the three final screenshots later, then make sure the filenames exactly match.
-
-For now, paste this into your empty `README.md`, save it, and tell me **done**.
-```
