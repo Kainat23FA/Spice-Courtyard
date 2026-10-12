@@ -114,14 +114,6 @@ Kainat Faisal
 
 Computer Science student interested in web development, software engineering, and learning new technologies.
 
-## Project Information
-
-* **Program:** The Sky Gen — Web Development
-* **Project:** Project 02 — Responsive Business Landing Page
-* **Business:** Spice Courtyard
-* **Assigned:** 22 September 2026
-* **Deadline:** 12 October 2026
-
 ## Connect With Me
 
 * GitHub: https://github.com/Kainat23FA
